@@ -14,6 +14,7 @@ body{
     background-color: #36384D;
     padding: 30px;
     border-radius: 20px;
+    overflow: hidden;
 }
 .card{
     display: flex;
@@ -23,12 +24,16 @@ body{
     border-radius: 20px;
 }
 .content-right{
-width: 60%;
+    width: 400px;
 }
 .content-left{
-    width: 100%;
-    margin-left: 40px;
+    width: 60px;
 }
+.content-left img {
+    width: 100%;
+    height: auto;
+}
+
 
 ul{
 list-style-image: url(./images/icon-success.svg);
@@ -45,12 +50,28 @@ label{
     margin-bottom: 10px;
     color:#000000;
     font-size: small;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 }
- span{
+ #error {
     color: red;
-    font-size: 9px;
+    font-size: 14px;
     display: none;
  }
+
+ input:invalid {
+    border: 2px solid red;
+    background-color: rgba(255, 192, 203, 0.3);
+    color: #ea6d65;
+    font-weight: 600;
+ }
+
+ #userEmail {
+    font-weight: 900;
+ }
+
+  
 input{
     padding: 10px 20px;
     font-family: inherit;
@@ -74,8 +95,15 @@ button:hover{
     transition: all 1s;
 }
 h1{
-    font-size: 50px;
+    font-size: 46px;
+    line-height: 56px;
+    font-weight: 700;
+    font: Roboto;
+    
     color: hsl(235, 29%, 20%);
+}
+p {
+    font-size: 16px;
 }
 .hide{
     display: none;
@@ -99,12 +127,15 @@ h1{
 @media(max-width:768px){
     .card{
         flex-direction: column-reverse;
-        width: 95%;
+        width: 100vw;
+        height: 100vh;
         padding:0;
     }
     body{
+        position: relative;
         padding: 0;
         margin: 0;
+        background-color: #fff;
     }
 
     .card h1{
@@ -112,18 +143,32 @@ h1{
     }
     .content-right{
         width: 100%;
-        padding: 20px;
+        padding: 20px 0 20px 40px;
+        margin: 0;
     }
     .content-left{
         width: 100%;
     }
-    .content-left img{
-        content: url(./images/illustration-sign-up-mobile.svg);
-    }
+    
     form{
         width: 90%;
     }
     .content-2{
         min-height: 100vh;
+        margin: 100px 0 20px 0;
     }
 }
+
+@media(min-width: 769px) and (max-width: 2560px) {
+    .content-left img{
+        width: 330px;
+        height: auto;
+    }
+}
+@media(min-width: 820px) and (max-width: 1180px) {
+    .content-left img{
+        width: 290px;
+        height: auto;
+    }
+}
+
