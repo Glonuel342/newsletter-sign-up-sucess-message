@@ -1,5 +1,5 @@
 const form = document.querySelector("form");
-const content_1 = document.querySelector(".card");
+const card_1 = document.querySelector(".card");
 const content_2 = document.querySelector(".content-2");
 const email = document.getElementById("email");
 const error = document.getElementById("error");
