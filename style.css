@@ -149,6 +149,15 @@ p {
     .content-left{
         width: 100%;
     }
+
+    .content-left img {
+        width: 375px;
+        content: url(./images/mobile\ img.png);
+        height: 284px;
+        position: absolute;
+        left: 0;
+        top: 0;
+      }
     
     form{
         width: 90%;
@@ -157,6 +166,8 @@ p {
         min-height: 100vh;
         margin: 100px 0 20px 0;
     }
+        
+      
 }
 
 @media(min-width: 769px) and (max-width: 2560px) {
