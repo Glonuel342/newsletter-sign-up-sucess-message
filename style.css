@@ -153,8 +153,8 @@ p {
     .content-left img {
         width: 375px;
         content: url(./images/mobile\ img.png);
-        height: 284px;
-        position: absolute;
+        height: 299px;
+        /* position: absolute; */
         left: 0;
         top: 0;
       }
